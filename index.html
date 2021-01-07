@@ -3,12 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>The Shoppies</title>
 
+  <!-- External CSS-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
+   <!-- App CSS-->
   <link rel="stylesheet" href="stylesheets/style.css">
-
 </head>
 <body>
-  <h1>HI</h1>
+
+  <div class="app-container">
+    <h1>The Shoppies</h1>
+    <form action="" class="search">
+      <label for="search">Movie title</label>
+      <input type="text" name="search-bar" id="search">
+    </form>
+    <div class="data-container">
+      <div class="results-container">
+        <p>results for 'batman'</p>
+        <ul>
+          <li>batman begins</li>
+          <li>dark knight rises</li>
+          <li>the batman</li>
+        </ul>
+      </div>
+      <div class="nominations-container">
+        <p>My nominations</p>
+        <ul>
+          <li>War of the worlds</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+  
 </body>
 </html>

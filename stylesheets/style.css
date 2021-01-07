@@ -1,6 +1,57 @@
+html {
+  box-sizing: border-box;
+}
+
 body {
-  background-color: gray;
-  color: blue;
+  background-color: #e6e6e6;
+  font-family: Helvetica, sans-serif;
+}
+body div.app-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: auto;
+}
+body form.search {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 20px;
+  margin: 10px;
+}
+body div.data-container {
+  display: flex;
+  flex-direction: column;
+}
+body div.data-container div.results-container {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  margin: 10px;
+  padding: 20px;
+}
+body div.data-container div.nominations-container {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  margin: 10px;
+  padding: 20px;
+}
+
+@media (min-width: 1024px) {
+  div.app-container {
+    width: 80%;
+  }
+  div.app-container div.data-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  div.app-container div.results-container {
+    width: 50%;
+  }
+  div.app-container div.nominations-container {
+    width: 50%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
