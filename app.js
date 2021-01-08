@@ -9,24 +9,30 @@ const createMovieElement = function(movieObj) {
   return $markup;
 }
 
+
+const lookUp = function (searchTerm, apiKey = '9be71466') {
+  return fetch(`http://www.omdbapi.com/?apikey=${apiKey}&s=${searchTerm}`)
+  .then(res => res.json())
+  .then(data => data.Search);
+}
+
 // get userinput from search form
 $('form').on('submit', function(event) {
   event.preventDefault();
   const searchTerm = $(this).find('#search').val()
 
   // make call to api
-  fetch(`http://www.omdbapi.com/?apikey=${apiKey}&s=${searchTerm}`)
-  .then(res => res.json())
-  .then(data => {
-    const movieArray = data.Search;
+  lookUp(searchTerm)
+  .then( movieArray => {
     // empty out existing results
-    $('#search-results').empty();
+    $('#search-results').empty()
     // render new results
     for (let movie of movieArray) {
       const $movie = createMovieElement(movie);
       $('#search-results').append($movie);
     }
-  });
+  })
 })
+
 
 
