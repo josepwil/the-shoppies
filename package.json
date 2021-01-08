@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "request": "^2.88.2",
     "sass": "^1.32.0"
   },
   "devDependencies": {
